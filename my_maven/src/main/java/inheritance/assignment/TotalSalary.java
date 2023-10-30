@@ -1,14 +1,21 @@
 package inheritance.assignment;
 
+import java.util.Scanner;
+
 public class TotalSalary extends SalaryAllowance {
 	
 	double totalSalary;
+	
+	public TotalSalary(int basicPay, int deduction, int bonus) {
+		super(basicPay, deduction, bonus);
+	}
 	
 	public void calculateTotalSalary() {
 		totalSalary = basicPay+hra-pf-deduction+bonus;
 	}
 	
 	public void getSalarySlip() {
+		System.out.println("----SALARY SLIP----");
 		System.out.println("Basic Pay: " + basicPay);
 		System.out.println("Deduction: " + deduction);
 		System.out.println("HRA: " + hra);
@@ -18,8 +25,15 @@ public class TotalSalary extends SalaryAllowance {
 	}
 
 	public static void main(String[] args) {
-		TotalSalary totalSalary = new TotalSalary();
-		totalSalary.getSalaryDivision();
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter basic pay: ");
+		int basicPay = sc.nextInt();
+		System.out.print("Enter deduction: ");
+		int deduction = sc.nextInt();
+		System.out.print("Enter bonus: ");
+		int bonus = sc.nextInt();
+		sc.close();
+		TotalSalary totalSalary = new TotalSalary(basicPay,deduction,bonus);
 		totalSalary.calculateHra();
 		totalSalary.calculatePf();
 		totalSalary.calculateTotalSalary();
