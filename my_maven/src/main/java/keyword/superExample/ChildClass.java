@@ -3,7 +3,7 @@ package keyword.superExample;
 public class ChildClass extends ParentClass {
 	
 	public ChildClass() {
-		super();
+		//super();
 		this.dispaly1();
 		System.out.println("This is a child class constructor");
 	}
