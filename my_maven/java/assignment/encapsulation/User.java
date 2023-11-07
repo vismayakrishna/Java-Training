@@ -11,7 +11,6 @@ public class User {
 		Bank obj = new Bank();
 		obj.setPinNumber(pin);
 		obj.getPinNumber();
-		obj.validatePin();
 		sc.close();
 	}
 }

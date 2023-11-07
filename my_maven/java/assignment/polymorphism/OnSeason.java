@@ -9,8 +9,7 @@ public class OnSeason extends OffSeason {
 		System.out.println("Discount during On-season: " + discount);
 	}
 
-	public static void main(String[] args) {
-		OffSeason obj = null;
+	public void chooseOption() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter price: ");
 		float price = sc.nextFloat();
@@ -18,17 +17,20 @@ public class OnSeason extends OffSeason {
 		int option = sc.nextInt();
 		switch (option) {
 		case 1:
-			obj = new OnSeason();
-			obj.discount(price);
+			discount(price);
 			break;
 		case 2:
-			obj = new OffSeason();
-			obj.discount(price);
+			super.discount(price);
 			break;
 		default:
 			System.out.println("Not a valid option");
 			break;
 		}
 		sc.close();
+	}
+
+	public static void main(String[] args) {
+		OnSeason obj = new OnSeason();
+		obj.chooseOption();
 	}
 }
