@@ -10,7 +10,7 @@ public class User {
 		int pin = sc.nextInt();
 		Bank obj = new Bank();
 		obj.setPinNumber(pin);
-		obj.getPinNumber();
+		System.out.println("Entered Pin: " + obj.getPinNumber());
 		sc.close();
 	}
 }

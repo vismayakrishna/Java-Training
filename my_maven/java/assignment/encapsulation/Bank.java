@@ -4,12 +4,13 @@ public class Bank {
 
 	private int pinNumber;
 
-	public void getPinNumber() {
+	public int getPinNumber() {
 		if(validatePin()) {
 			System.out.println("Valid Pin");
 		} else {
 			System.out.println("Invalid Pin");
 		}
+		return pinNumber;
 	}
 
 	public void setPinNumber(int pinNumber) {
