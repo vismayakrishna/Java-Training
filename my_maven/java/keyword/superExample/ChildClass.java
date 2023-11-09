@@ -1,7 +1,7 @@
 package keyword.superExample;
 
 public class ChildClass extends ParentClass {
-	
+
 	public ChildClass() {
 		//super();
 		this.dispaly1();
@@ -18,8 +18,5 @@ public class ChildClass extends ParentClass {
 		ChildClass childClass = new ChildClass();
 		//childClass.add();
 		//childClass.dispaly1();
-		
-
 	}
-
 }

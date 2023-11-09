@@ -43,8 +43,8 @@ public class Address {
 		System.out.println("---Student details---");
 		System.out.println("Student Name: " + std.getStudentName());
 		System.out.println("Roll number: " + std.getRollNumber());
-		System.out.println("House Number: " + houseNumber);
-		System.out.println("House Name: " + houseName);
+		System.out.println("House Number: " + getHouseNumber());
+		System.out.println("House Name: " + getHouseName());
 		System.out.println("Street Name: " + streetName);
 	}
 

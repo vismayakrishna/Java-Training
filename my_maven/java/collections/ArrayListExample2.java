@@ -19,8 +19,8 @@ public class ArrayListExample2 {
 		System.out.println("Colours List: " + colors);
 	}
 	
-	public void retrieveElement() {
-		System.out.println("Retreieved Element: " + colors.get(2));
+	public void retrieveElement(int index) {
+		System.out.println("Retreieved Element: " + colors.get(index));
 	}
 	
 	public void iterateArray() {
@@ -29,26 +29,23 @@ public class ArrayListExample2 {
 		}
 	}
 	
-	public void removeElement() {
-		System.out.println("Removed Element: " + colors.remove(2));
+	public void removeElement(int index) {
+		System.out.println("Removed Element: " + colors.remove(index));
 	}
 	
-	public void searchElement() {
-		System.out.println("Searched element present: " + colors.contains("White"));
+	public void searchElement(String element) {
+		boolean flag=false;
+		for(String color:colors) {
+			if(color.equalsIgnoreCase(element)) {
+				flag = true;
+			}
+		}
+		if(flag) {
+			System.out.println(element+" is present");
+		} else {
+			System.out.println(element+" is not present");
+		}
 	}
-	
-	public static void main(String[] args) {
-		ArrayListExample2 obj = new ArrayListExample2();
-		obj.addElements();
-		obj.printArrayList();
-		obj.retrieveElement();
-		System.out.println("Iterating list:");
-		System.out.println("-----------------------");
-		obj.iterateArray();
-		obj.removeElement();
-		obj.searchElement();
-	}
-
 }
 
  
